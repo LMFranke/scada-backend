@@ -26,10 +26,4 @@ public class Fermenter {
     @Column(name = "index_number", nullable = false)
     private Integer indexNumber;
 
-    @Column(name = "sensor_device_address", nullable = false)
-    private String sensorDeviceAddress;
-
-    @Column(name = "is_active", nullable = false)
-    private Boolean active = true;
-
 }

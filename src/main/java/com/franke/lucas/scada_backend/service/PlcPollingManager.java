@@ -1,6 +1,7 @@
 package com.franke.lucas.scada_backend.service;
 
 import com.franke.lucas.scada_backend.model.Plc;
+import com.franke.lucas.scada_backend.workers.PlcReaderWorker;
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;

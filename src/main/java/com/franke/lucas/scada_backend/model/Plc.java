@@ -30,9 +30,6 @@ public class Plc {
     @Column(name = "serial_number", nullable = false, unique = true)
     private String serialNumber;
 
-    @Column(name = "license_key", nullable = false)
-    private String licenseKey;
-
     @OneToMany(mappedBy = "plc", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @ToString.Exclude
     private List<Fermenter> fermenters;

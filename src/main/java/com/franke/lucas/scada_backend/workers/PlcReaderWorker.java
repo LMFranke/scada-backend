@@ -1,6 +1,5 @@
-package com.franke.lucas.scada_backend.service;
+package com.franke.lucas.scada_backend.workers;
 
-import com.franke.lucas.scada_backend.model.Fermenter;
 import com.franke.lucas.scada_backend.model.Plc;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
@@ -12,15 +11,6 @@ public class PlcReaderWorker {
     public void readPlcData(Plc plc) {
         try {
             System.out.println("Starting reading from PLC: " + plc.getName() + " on thread: " + Thread.currentThread().getName());
-
-            for (Fermenter fermenter : plc.getFermenters()) {
-                if (!fermenter.getActive()) {
-                    continue;
-                }
-
-                int baseAddress = fermenter.getIndexNumber() * 100;
-                String startDevice = "D" + baseAddress;
-            }
 
             // slmpClient.disconnect();
 
