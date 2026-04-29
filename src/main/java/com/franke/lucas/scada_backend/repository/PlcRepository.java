@@ -18,9 +18,6 @@ public interface PlcRepository extends JpaRepository<Plc, Long> {
     // Procura um PLC específico pelo seu endereço IP
     Optional<Plc> findByIpAddress(String ipAddress);
 
-    // Procura um PLC pelo número de série do equipamento (útil para validações de licença)
-    Optional<Plc> findBySerialNumber(String serialNumber);
-
     // Verifica se já existe algum PLC registado com um determinado nome
     boolean existsByName(String name);
 
